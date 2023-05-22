@@ -11,7 +11,7 @@ function generateParagraph(sentenceCount) {
     for(let i = 0; i < sentenceCount; i++) {
         paragraph += getRandomSentence() + ' ';
     }
-    return paragraph.trim() + '.\n\n'; // Add period at the end of paragraph and newline for formatting
+    return paragraph.trim() + '\n\n'; // formatting
 }
 
 // This function generates multiple paragraphs
@@ -34,6 +34,14 @@ document.getElementById('generateButton').addEventListener('click', function() {
 // Adding event listener to button for copying text to clipboard
 document.getElementById('copyButton').addEventListener('click', function() {
     const textArea = document.getElementById('generatedText');
-    textArea.select();
-    document.execCommand('copy');
+    const copyMessage = document.getElementById('copyMessage');
+
+    navigator.clipboard.writeText(textArea.value).then(function() {
+        // Show the message when copying to clipboard was successful
+        copyMessage.textContent = 'Text copied to clipboard.';
+    }, function(err) {
+        // Show an error message when copying to clipboard failed
+        copyMessage.textContent = 'Failed to copy text.';
+        console.error('Could not copy text: ', err);
+    });
 });
