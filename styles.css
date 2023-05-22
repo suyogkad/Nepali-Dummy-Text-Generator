@@ -8,11 +8,20 @@ body {
     height: 100vh;
     margin: 0;
     background-color: #f0f0f0;
+    padding-top: 25px;
 }
 
 h1 {
     font-family: 'Roboto Slab', serif;
     margin-bottom: 20px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 80%;  /* match width with the textarea */
+    margin: 0 auto 20px;  /* center the controls horizontally */
 }
 
 .text-container {
@@ -23,27 +32,69 @@ h1 {
 }
 
 #generatedText {
-    height: 200px;
+    width: 78%;  /* adjust width as per your requirement */
+    height: 300px;
     margin: 20px auto;
     padding: 10px;
-    width: 100%;
+}
+
+.copy-clear-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  /* align items vertically */
+    width: 80%;  /* match width with the textarea */
+    margin: 0 auto 20px;  /* center the section horizontally */
 }
 
 .copy-section {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }
 
-#copyButton {
+#copyButton, #clearButton {
     padding: 10px 20px;
     font-size: 1.2em;
     margin-top: 10px;
 }
 
+#copyMessage {
+    color: green;
+    margin-top: 5px;
+    opacity: 1;
+    transition: opacity 2s;
+}
+
+#clearButton {
+    background-color: red;
+    color: white;
+    align-self: center;
+}
+
 footer {
-    margin-top: 50px;
-    font-size: 0.8em;
-    color: #666;
+    text-align: center;
+    padding: 20px;
+    /* background-color: #f8f9fa; */
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+.footer-icons a {
+    color: #333;
+    font-size: 1.5em;
+    transition: color 0.5s;
+}
+
+.footer-icons a.github-icon:hover {
+    color: #000;
+}
+
+.footer-icons a.linkedin-icon:hover {
+    color: #0077b5;
 }
