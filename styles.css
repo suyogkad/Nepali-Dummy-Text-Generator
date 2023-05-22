@@ -20,8 +20,8 @@ h1 {
     display: flex;
     justify-content: center;
     gap: 20px;
-    width: 80%;  /* match width with the textarea */
-    margin: 0 auto 20px;  /* center the controls horizontally */
+    width: 80%;
+    margin: 0 auto 20px;
 }
 
 .text-container {
@@ -32,7 +32,7 @@ h1 {
 }
 
 #generatedText {
-    width: 78%;  /* adjust width as per your requirement */
+    width: 78%;
     height: 300px;
     margin: 20px auto;
     padding: 10px;
@@ -41,9 +41,9 @@ h1 {
 .copy-clear-section {
     display: flex;
     justify-content: space-between;
-    align-items: center;  /* align items vertically */
-    width: 80%;  /* match width with the textarea */
-    margin: 0 auto 20px;  /* center the section horizontally */
+    align-items: center;
+    width: 80%;
+    margin: 0 auto 20px;
 }
 
 .copy-section {
@@ -75,7 +75,6 @@ h1 {
 footer {
     text-align: center;
     padding: 20px;
-    /* background-color: #f8f9fa; */
 }
 
 .footer-icons {
@@ -97,4 +96,28 @@ footer {
 
 .footer-icons a.linkedin-icon:hover {
     color: #0077b5;
+}
+
+@media screen and (max-width: 600px) {
+    #controls {
+        flex-direction: column;
+        align-items: center;
+    }
+    #controls input {
+        margin-bottom: 10px;
+    }
+    #controls button {
+        margin-bottom: 20px;
+    }
+    #generatedText {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+    #buttons-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .clipboard-clear-buttons {
+        margin-bottom: 10px;
+    }
 }

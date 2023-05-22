@@ -11,7 +11,7 @@ function generateParagraph(sentenceCount) {
     for(let i = 0; i < sentenceCount; i++) {
         paragraph += getRandomSentence() + ' ';
     }
-    return paragraph.trim() + '.\n\n'; // Add period at the end of paragraph and newline for formatting
+    return paragraph.trim() + '\n\n';
 }
 
 // This function generates multiple paragraphs
