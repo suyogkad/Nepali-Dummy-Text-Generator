@@ -2,10 +2,11 @@
 <html>
 <head>
     <title>Nepali Ipsum Generator</title>
-    <link rel="stylesheet" type="text/css" href="/styles.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+    <script src="scripts.js" type="module"></script>
 </head>
 <body>
     <h1>Nepali Ipsum Generator</h1>
@@ -14,9 +15,13 @@
     <label for="sentenceCount">Sentences per Paragraph:</label>
     <input type="number" id="sentenceCount" min="1" value="1">
     <button id="generateButton">Generate</button>
-    <button id="copyButton">Copy to Clipboard</button>
-    <p id="copyMessage"></p>
-    <textarea id="generatedText" readonly></textarea>
-    <script src="/scripts.js" type="module"></script>
+    <div class="text-container">
+        <textarea id="generatedText" readonly></textarea>
+        <div class="copy-section">
+            <button id="copyButton">📋 Copy to Clipboard</button>
+            <p id="copyMessage"></p>
+        </div>
+    </div>
+    <footer>Developed by Suyog Kadariya</footer>
 </body>
 </html>
