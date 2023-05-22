@@ -52,11 +52,11 @@ document.getElementById('copyButton').addEventListener('click', function() {
 
     // Check if textArea is empty
     if (textArea.value.trim() === '') {
-        copyMessage.textContent = 'Why copy blank space ?';
-        copyMessage.style.opacity = '1';  // Reset opacity
+        blankMessage.textContent = 'Why copy blank space ?';
+        blankMessage.style.opacity = '1';  // Reset opacity
 
         setTimeout(function() {
-            copyMessage.style.opacity = '0';  // Make message fade away
+            blankMessage.style.opacity = '0';  // Make message fade away
         }, 2000);  // 2000ms = 2s
         return;
         

@@ -66,6 +66,13 @@ h1 {
     transition: opacity 2s;
 }
 
+#blankMessage {
+    color: red;
+    margin-top: 5px;
+    opacity: 1;
+    transition: opacity 1s;
+}
+
 #clearButton {
     background-color: red;
     color: white;
@@ -87,7 +94,7 @@ footer {
 .footer-icons a {
     color: #333;
     font-size: 1.5em;
-    transition: color 0.5s;
+    transition: color 5ms;
 }
 
 .footer-icons a.github-icon:hover {
@@ -95,7 +102,7 @@ footer {
 }
 
 .footer-icons a.linkedin-icon:hover {
-    color: #0077b5;
+    color: #0E76A8;
 }
 
 @media screen and (max-width: 600px) {
